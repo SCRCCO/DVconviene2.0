@@ -78,7 +78,7 @@ class CoopStoreLocator:
                 }
                 stores_data.append(store_info)
 
-            with open('coop_stores.json', 'a', encoding='utf-8') as json_file:
+            with open('Outputs/coop_stores.json', 'a', encoding='utf-8') as json_file:
                 json_file.seek(0, 2)
 
                 if json_file.tell() > 0:
@@ -128,7 +128,7 @@ class CoopStoreLocator:
     def GET_ALL_STORES_COOP(self):
         self.get_all_stores_coop()
         print('Processing the json...')
-        self.handle_json("coop_stores.json")
+        self.handle_json("Outputs/coop_stores.json")
 
 
 if __name__ == "__main__":
